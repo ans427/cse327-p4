@@ -1,0 +1,100 @@
+risk_organ(SE, Spec).
+may_have_disease(patient_iris, D), may_have_disease(D1, D), should_consult(D1, D2), should_consult(patient_alice, D2).
+possible_complication(Doc, D1).
+needs_drug(Organ, RF).
+at_risk_for(D2, P).
+symptom_organ(D, Organ).
+risk_factor(D), risk_increases(D, D1), possible_complication(patient_mia, D1), risk_increases(D, hypertension).
+possible_affected_organ(D1, D), affected_organ(D2, D), should_consult(D1, dr_chen), may_have_disease(D2, anemia).
+possible_drug_need(patient_carol, Drug).
+should_consult(patient_jack, D), should_consult(patient_carol, D), should_consult(patient_dave, D).
+possible_drug_need(Organ, fluticasone).
+specialty(D), at_risk_specialist(patient_noah, D).
+possible_drug_need(patient_henry, SE).
+possible_drug_need(D1, D), drug(D), possible_drug_need(patient_henry, D), diagnosed_with(D1, influenza).
+may_have_disease(Drug, depression).
+potential_side_effect(SE, Drug).
+should_consult(Doc, Spec).
+possible_complication(patient_liam, P).
+side_effect_from_possible_drug(D, nausea), preventive_care_needed(D, D1), has_symptom(D1, back_pain).
+should_consult(D, D1), secondary_organ_risk(D, heart), at_risk_doctor(patient_carol, D1), risk_organ(D, kidneys), possible_drug_need(D, oseltamivir).
+possible_drug_need(patient_kate, D1).
+needs_specialist(SE, S).
+possible_drug_need(Doc, Organ).
+possible_drug_need(patient_liam, D), possible_drug_need(patient_bob, D), possible_drug_need(D1, D), at_risk_for(D1, heart_disease).
+should_consult(Drug, Doc).
+diagnosed_with(D, influenza), needs_specialist(D, psychiatry).
+should_consult(Spec, D1).
+may_have_disease(patient_bob, SE).
+secondary_organ_risk(patient_alice, S).
+should_consult(D, dr_jones), secondary_organ_risk(D, D1), may_have_disease(D, covid19), risk_organ(patient_olivia, D1).
+complication_specialist(patient_henry, S).
+at_risk_doctor(D, D1), chronic_organ_concern(D, D2), should_consult(patient_eve, D1), possible_affected_organ(patient_grace, D2), symptom_organ(chest_pain, D2).
+diagnosed_with(D, D1), risk_organ(D, kidneys), complication_doctor(D, dr_smith), may_have_disease(patient_jack, D1).
+needs_specialist(D2, psychiatry).
+symptom_organ(D, kidneys), symptom_organ(D, pancreas).
+drug_for_symptom(sertraline, D2).
+secondary_organ_risk(D, D2), exhibits(D, D1), side_effect_from_possible_drug(patient_grace, D1), possible_affected_organ(D, liver), risk_organ(patient_carol, D2).
+risk_organ(SE, kidneys).
+possible_drug_need(D, D2).
+possible_affected_organ(D, Drug).
+symptom(D), exhibits(D1, D), drug_for_symptom(aspirin, D), chronic_organ_concern(D1, brain), affected_organ(D1, brain).
+possible_drug_need(D, D1), possible_drug_need(D, D2), drug_for_symptom(D1, fatigue), needs_drug(patient_alice, D1), possible_drug_need(patient_noah, D2).
+possible_drug_need(patient_iris, Spec).
+relevant_doctor(dr_jones, D2).
+possible_drug_need(patient_iris, D).
+complication_drug(patient_kate, SE).
+at_risk_for(D, Doc).
+should_consult(D, dr_jones), at_risk_for(D, alzheimers), potential_side_effect(D, nausea).
+should_consult(patient_mia, S).
+possible_drug_need(patient_mia, Spec).
+possible_drug_need(D1, RF).
+preventive_care_needed(D2, D), diagnosed_with(patient_noah, D), preventive_care_needed(D1, D), needs_specialist(D1, pulmonology), possible_drug_need(D2, amlodipine).
+relevant_doctor(Drug, P).
+possible_drug_need(Doc, RF).
+may_have_disease(Spec, liver_disease).
+treats(oseltamivir, D), has_symptom(D, fatigue).
+complication_organ(SE, Doc).
+possible_affected_organ(D, D1), complication_doctor(D, dr_smith), symptom_organ(fatigue, D1).
+possible_drug_need(patient_dave, D), possible_drug_need(patient_frank, D).
+has_symptom(hypothyroidism, D), side_effect_from_possible_drug(patient_alice, D).
+symptom_organ(Doc, S).
+relevant_doctor(Drug, Doc).
+complication_specialist(RF, D1).
+possible_drug_need(patient_carol, RF).
+risk_organ(patient_noah, D), risk_organ(patient_henry, D), secondary_organ_risk(patient_carol, D), secondary_organ_risk(patient_henry, D), secondary_organ_risk(patient_grace, D).
+complication_drug(Doc, D1).
+should_consult(D, dr_garcia), may_have_disease(D, D1), chronic(D1).
+at_risk_doctor(D2, S).
+side_effect_from_possible_drug(SE, RF).
+possible_complication(D, anxiety), possible_affected_organ(D, D1), possible_affected_organ(patient_frank, D1).
+possible_affected_organ(SE, D).
+side_effect_from_possible_drug(S, SE).
+side_effect_from_possible_drug(D, D1), needs_specialist(D, D2), side_effect_from_possible_drug(patient_mia, D1), at_risk_specialist(patient_olivia, D2), side_effect(warfarin, D1).
+specialty(D), needs_specialist(patient_mia, D), has_specialty(dr_wilson, D).
+preventive_care_needed(patient_henry, Doc).
+preventive_care_needed(patient_henry, P).
+may_have_disease(D, anxiety), possible_affected_organ(D, heart), possible_complication(D, anxiety).
+side_effect_from_possible_drug(Doc, Drug).
+at_risk_for(P, D2).
+complication_drug(patient_kate, Spec).
+at_risk_doctor(RF, D).
+risk_organ(SE, Organ).
+may_have_disease(Drug, liver_disease).
+possible_affected_organ(D1, D).
+drug_for_symptom(Spec, RF).
+relevant_doctor(RF, hypothyroidism).
+treats(D, D1), side_effect(D, D2), may_have_disease(patient_carol, D1), side_effect_from_possible_drug(patient_bob, D2), drug_for_symptom(D, D2).
+at_risk_specialist(SE, D).
+exhibits(patient_alice, D), has_symptom(D1, D), treats(aspirin, D1).
+possible_drug_need(D, oseltamivir), side_effect_from_possible_drug(D, cough).
+side_effect_from_possible_drug(D, P).
+should_consult(D, dr_jones), affected_organ(D, lungs).
+possible_drug_need(RF, SE).
+drug_for_symptom(D, D2), possible_drug_need(D1, D), may_have_disease(D1, anxiety), exhibits(patient_dave, D2), possible_drug_need(patient_kate, D).
+should_consult(patient_grace, Drug).
+secondary_organ_risk(D, Organ).
+possible_complication(D1, Organ).
+risk_organ(D, S).
+drug_for_symptom(RF, D1).
+possible_drug_need(D2, Organ).
