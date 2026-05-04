@@ -1,0 +1,402 @@
+(cse327python311) jupyter-arj227@magic01:~/cse327-p4/austin/healthcare$ CUDA_VISIBLE_DEVICES=2 python ../../nnreasoner.py --embed_type unification --save_model uni_mr_model_modarch.pt && CUDA_VISIBLE_DEVICES=2 python ../../evaluate.py --kb Healthcare_Knowledge_Base-1.pl -u --scoring_model_path uni_mr_model_modarch.pt
+States from vocab: vocab
+Num predicates: 57
+Max arity: 2
+Num constants: 115
+Num variables: 11
+
+Training unification
+Embed size: 50
+Reading examples from mr_train_examples.csv
+Parsing examples...
+Generating embeddings...
+Embedding input size: 309
+ [███████████████] 17765/17765 Prepping examples                                                    
+Loaded data...
+Using cuda device
+/opt/tljh/user/envs/cse327python311/lib/python3.11/site-packages/torch/nn/modules/lazy.py:180: UserWarning: Lazy modules are a new feature under heavy development so changes to the API or functionality can happen at any moment.
+  warnings.warn('Lazy modules are a new feature under heavy development '
+0       0.62853 (-)
+50      0.42371 (-0.0037)
+100     0.38276 (-0.0022)
+150     0.35513 (-0.0016)
+200     0.34297 (-0.0013)
+250     0.33090 (-0.0011)
+300     0.32693 (-0.0009)
+350     0.32303 (-0.0008)
+400     0.31772 (-0.0007)
+450     0.30739 (-0.0006)
+500     0.30669 (-0.0006)
+550     0.30357 (-0.0005)
+600     0.30012 (-0.0005)
+650     0.29696 (-0.0004)
+700     0.28852 (-0.0004)
+750     0.28727 (-0.0004)
+800     0.28698 (-0.0004)
+850     0.28133 (-0.0003)
+900     0.27746 (-0.0003)
+950     0.27794 (-0.0003)
+1000    0.27760 (-0.0003)
+1050    0.26767 (-0.0003)
+1100    0.27032 (-0.0003)
+1150    0.27250 (-0.0003)
+1200    0.26183 (-0.0002)
+1250    0.26627 (-0.0002)
+1300    0.25841 (-0.0002)
+1350    0.26341 (-0.0002)
+1400    0.25938 (-0.0002)
+1450    0.25662 (-0.0002)
+1500    0.25515 (-0.0002)
+1550    0.25692 (-0.0002)
+1600    0.24931 (-0.0002)
+1650    0.25009 (-0.0002)
+1700    0.25022 (-0.0002)
+1750    0.25067 (-0.0002)
+1800    0.25009 (-0.0002)
+1850    0.24414 (-0.0002)
+1900    0.24457 (-0.0001)
+1950    0.23790 (-0.0001)
+2000    0.24416 (-0.0001)
+2050    0.24026 (-0.0001)
+2100    0.24718 (-0.0001)
+2150    0.24521 (-0.0001)
+2199    0.24263 (-0.0001)
+Saved training loss figure.
+using cuda device
+UNITY: ming
+        Embedding Model: rKB_model.pth
+        Scoring Model: uni_mr_model_modarch.pt
+
+        Control: mingoal
+        Rule Eval: Max Rule
+Learned Embedding: Network using cuda
+/opt/tljh/user/envs/cse327python311/lib/python3.11/site-packages/torch/nn/modules/lazy.py:180: UserWarning: Lazy modules are a new feature under heavy development so changes to the API or functionality can happen at any moment.
+  warnings.warn('Lazy modules are a new feature under heavy development '
+Query 1: [drug_for_symptom(D, D1), treats(D, migraine), has_symptom(kidney_disease, D1), needs_drug(patient_jack, D)]
+Query failed!!!                                                                                     
+13 :: 0 - 00:00:00 (29 nps)
+
+Query 2: [potential_side_effect(D1, D)]
+Query failed!!!                                                                                     
+66 :: 0 - 00:00:00 (660 nps)
+
+Query 3: [requires_specialist(kidney_disease, D), complication_specialist(patient_alice, D)]
+8 :: 6 - 00:00:00 (177 nps)                                                                         
+
+Query 4: [has_symptom(osteoporosis, D), symptom_organ(D, D1), risk_organ(patient_noah, D1), symptom(D), risk_organ(patient_grace, D1)]
+138 :: 13 - 00:00:00 (276 nps)                                                                      
+
+Query 5: [should_consult(patient_iris, D)]
+11 :: 8 - 00:00:00 (68 nps)                                                                         
+
+Query 6: [complication_drug(D, atorvastatin), should_consult(D, D1), should_consult(patient_eve, D1), side_effect_from_possible_drug(D, dizziness)]
+Query failed!!!                                                                                     
+251097 :: 0 - 00:00:16 (15551 nps)
+
+Query 7: [possible_drug_need(RF, levothyroxine)]
+7 :: 6 - 00:00:00 (112 nps)                                                                         
+
+Query 8: [symptom_organ(RF, liver)]
+11 :: 3 - 00:00:00 (219 nps)                                                                        
+
+Query 9: [should_consult(SE, Drug)]
+9 :: 8 - 00:00:00 (93 nps)                                                                          
+
+Query 10: [side_effect_from_possible_drug(D1, SE)]
+Query failed!!!                                                                                     
+1368 :: 0 - 00:00:00 (4480 nps)
+
+Query 11: [possible_drug_need(patient_mia, Spec)]
+25 :: 6 - 00:00:00 (242 nps)                                                                        
+
+Query 12: [should_consult(RF, dr_jones)]
+9 :: 8 - 00:00:00 (134 nps)                                                                         
+
+Query 13: [symptom_organ(blurred_vision, D), secondary_organ_risk(D1, D), should_consult(D1, D2), complication_doctor(patient_mia, D2)]
+Query failed!!!                                                                                     
+5934 :: 0 - 00:00:01 (3195 nps)
+
+Query 14: [possible_complication(Spec, Organ)]
+7 :: 6 - 00:00:00 (43 nps)                                                                          
+
+Query 15: [complication_drug(Spec, D2)]
+6 :: 5 - 00:00:00 (98 nps)                                                                          
+
+Query 16: [at_risk_doctor(Organ, D1)]
+Query failed!!!                                                                                     
+110 :: 0 - 00:00:00 (958 nps)
+
+Query 17: [affects(copd, D), affects(asthma, D)]
+3 :: 2 - 00:00:00 (992 nps)                                                                         
+
+Query 18: [should_consult(D, D1), may_have_disease(D, hypertension), should_consult(D2, D1), possible_drug_need(D2, sertraline)]
+Query failed!!!                                                                                     
+15933 :: 0 - 00:00:01 (7973 nps)
+
+Query 19: [has_symptom(stroke, D), has_symptom(D1, D), preventive_care_needed(patient_grace, D1)]
+7 :: 6 - 00:00:00 (95 nps)                                                                          
+
+Query 20: [drug_for_symptom(levothyroxine, D), side_effect_from_possible_drug(D1, D), complication_specialist(D1, nephrology), side_effect(prednisone, D), symptom_organ(D, thyroid)]
+Query failed!!!                                                                                     
+48 :: 0 - 00:00:00 (485 nps)
+
+Query 21: [diagnosed_with(D, D1), complication_specialist(D, neurology), may_have_disease(D, D1)]
+132 :: 10 - 00:00:00 (476 nps)                                                                      
+
+Query 22: [causes(anemia, D), may_have_disease(patient_mia, D)]
+8 :: 5 - 00:00:00 (130 nps)                                                                         
+
+Query 23: [has_symptom(D1, D), side_effect_from_possible_drug(patient_frank, D), has_symptom(D1, D2), drug_for_symptom(prednisone, D2), has_symptom(osteoporosis, D2)]
+1478 :: 13 - 00:00:00 (2639 nps)                                                                    
+
+Query 24: [secondary_organ_risk(Organ, kidneys)]
+59 :: 8 - 00:00:00 (293 nps)                                                                        
+
+Query 25: [risk_organ(patient_dave, RF)]
+9 :: 5 - 00:00:00 (144 nps)                                                                         
+
+Query 26: [possible_drug_need(Organ, Drug)]
+7 :: 6 - 00:00:00 (35 nps)                                                                          
+
+Query 27: [at_risk_doctor(patient_eve, Drug)]
+47 :: 7 - 00:00:00 (2858 nps)                                                                       
+
+Query 28: [possible_affected_organ(D1, thyroid)]
+Query failed!!!                                                                                     
+89 :: 0 - 00:00:00 (848 nps)
+
+Query 29: [secondary_organ_risk(patient_grace, P)]
+20 :: 8 - 00:00:00 (260 nps)                                                                        
+
+Query 30: [possible_drug_need(D, ibuprofen)]
+7 :: 6 - 00:00:00 (113 nps)                                                                         
+
+Query 31: [should_consult(patient_kate, S)]
+9 :: 8 - 00:00:00 (165 nps)                                                                         
+
+Query 32: [at_risk_for(D, stroke), potential_side_effect(D, cough)]
+145 :: 8 - 00:00:00 (909 nps)                                                                       
+
+Query 33: [needs_drug(patient_grace, D), needs_drug(patient_jack, D)]
+12 :: 6 - 00:00:00 (407 nps)                                                                        
+
+Query 34: [should_consult(patient_liam, D), has_specialty(D, rheumatology)]
+16 :: 9 - 00:00:00 (512 nps)                                                                        
+
+Query 35: [side_effect_from_possible_drug(patient_frank, RF)]
+20 :: 8 - 00:00:00 (281 nps)                                                                        
+
+Query 36: [needs_specialist(patient_alice, D), complication_specialist(patient_alice, D)]
+103 :: 11 - 00:00:00 (853 nps)                                                                      
+
+Query 37: [possible_complication(patient_carol, D), possible_complication(D1, D), risk_organ(D1, brain), exhibits(D1, weight_gain)]
+Query failed!!!                                                                                     
+76434 :: 0 - 00:00:03 (20885 nps)
+
+Query 38: [at_risk_doctor(patient_bob, Doc)]
+11 :: 7 - 00:00:00 (245 nps)                                                                        
+
+Query 39: [may_experience_side_effect(Organ, Doc)]
+4 :: 3 - 00:00:00 (126 nps)                                                                         
+
+Query 40: [needs_drug(RF, D1)]
+4 :: 3 - 00:00:00 (109 nps)                                                                         
+
+Query 41: [needs_specialist(S, Spec)]
+7 :: 6 - 00:00:00 (64 nps)                                                                          
+
+Query 42: [possible_affected_organ(P, D2)]
+7 :: 6 - 00:00:00 (73 nps)                                                                          
+
+Query 43: [secondary_organ_risk(patient_eve, RF)]
+25 :: 8 - 00:00:00 (671 nps)                                                                        
+
+Query 44: [needs_specialist(patient_liam, P)]
+7 :: 6 - 00:00:00 (94 nps)                                                                          
+
+Query 45: [drug_for_symptom(D, abdominal_pain), possible_drug_need(patient_grace, D)]
+10 :: 9 - 00:00:00 (530 nps)                                                                        
+
+Query 46: [possible_drug_need(D, D1), side_effect_from_possible_drug(D, D2), possible_drug_need(patient_carol, D1), side_effect(aspirin, D2), drug_for_symptom(ibuprofen, D2)]
+Query failed!!!                                                                                     
+50510 :: 0 - 00:00:06 (7245 nps)
+
+Query 47: [side_effect_from_possible_drug(Doc, Spec)]
+12 :: 8 - 00:00:00 (82 nps)                                                                         
+
+Query 48: [potential_side_effect(Drug, nausea)]
+7 :: 5 - 00:00:00 (252 nps)                                                                         
+
+Query 49: [complication_drug(Doc, RF)]
+6 :: 5 - 00:00:00 (94 nps)                                                                          
+
+Query 50: [at_risk_for(D2, S)]
+4 :: 3 - 00:00:00 (100 nps)                                                                         
+
+Query 51: [may_have_disease(RF, D2)]
+5 :: 4 - 00:00:00 (52 nps)                                                                          
+
+Query 52: [possible_affected_organ(D1, RF)]
+Query failed!!!                                                                                     
+89 :: 0 - 00:00:00 (9088 nps)
+
+Query 53: [potential_side_effect(S, Organ)]
+6 :: 5 - 00:00:00 (117 nps)                                                                         
+
+Query 54: [may_have_disease(P, Organ)]
+5 :: 4 - 00:00:00 (48 nps)                                                                          
+
+Query 55: [exhibits(patient_alice, D), drug_for_symptom(D1, D), possible_drug_need(patient_kate, D1), has_symptom(diabetes, D)]
+294 :: 11 - 00:00:00 (839 nps)                                                                      
+
+Query 56: [symptom_organ(excessive_thirst, D), symptom_organ(D1, D), complication_drug_side_effect(patient_mia, D1), symptom(D1)]
+Query failed!!!                                                                                     
+602 :: 0 - 00:00:00 (1150 nps)
+
+Query 57: [complication_doctor(RF, P)]
+8 :: 7 - 00:00:00 (132 nps)                                                                         
+
+Query 58: [at_risk_for(S, SE)]
+4 :: 3 - 00:00:00 (104 nps)                                                                         
+
+Query 59: [risk_organ(Spec, D2)]
+6 :: 5 - 00:00:00 (221 nps)                                                                         
+
+Query 60: [may_have_disease(D, copd)]
+5 :: 4 - 00:00:00 (704 nps)                                                                         
+
+Query 61: [may_have_disease(patient_liam, Drug)]
+5 :: 4 - 00:00:00 (91 nps)                                                                          
+
+Query 62: [can_treat(dr_jones, RF)]
+6 :: 4 - 00:00:00 (161 nps)                                                                         
+
+Query 63: [side_effect_from_possible_drug(SE, D2)]
+Query failed!!!                                                                                     
+2080 :: 0 - 00:00:00 (4458 nps)
+
+Query 64: [needs_specialist(D, cardiology), complication_specialist(D, D1), specialty(D1)]
+13 :: 12 - 00:00:00 (87 nps)                                                                        
+
+Query 65: [symptom_organ(Spec, Doc)]
+4 :: 3 - 00:00:00 (59 nps)                                                                          
+
+Query 66: [may_experience_side_effect(RF, D2)]
+4 :: 3 - 00:00:00 (225 nps)                                                                         
+
+Query 67: [preventive_care_needed(Spec, Organ)]
+5 :: 4 - 00:00:00 (227 nps)                                                                         
+
+Query 68: [affects(D, thyroid), may_have_disease(patient_alice, D), treats(levothyroxine, D), may_have_disease(patient_eve, D)]
+30 :: 10 - 00:00:00 (689 nps)                                                                       
+
+Query 69: [possible_affected_organ(D, brain), needs_specialist(D, rheumatology)]
+230 :: 11 - 00:00:00 (2477 nps)                                                                     
+
+Query 70: [should_consult(patient_bob, D), at_risk_doctor(D1, D), possible_complication(D1, stroke), at_risk_doctor(patient_alice, D)]
+Query failed!!!                                                                                     
+5794 :: 0 - 00:00:01 (3493 nps)
+
+Query 71: [possible_complication(D2, D)]
+Query failed!!!                                                                                     
+57 :: 0 - 00:00:00 (1071 nps)
+
+Query 72: [secondary_organ_risk(RF, heart)]
+174 :: 8 - 00:00:00 (1934 nps)                                                                      
+
+Query 73: [drug_for_symptom(metformin, Spec)]
+4 :: 3 - 00:00:00 (577 nps)                                                                         
+
+Query 74: [side_effect_from_possible_drug(patient_kate, D), symptom_organ(D, brain), drug_for_symptom(sertraline, D)]
+292 :: 14 - 00:00:00 (2063 nps)                                                                     
+
+Query 75: [symptom_organ(D, heart), symptom(D)]
+13 :: 4 - 00:00:00 (310 nps)                                                                        
+
+Query 76: [secondary_organ_risk(Doc, brain)]
+9 :: 8 - 00:00:00 (87 nps)                                                                          
+
+Query 77: [has_risk_factor(patient_liam, D), risk_increases(D, heart_disease), risk_factor(D)]
+4 :: 3 - 00:00:00 (273 nps)                                                                         
+
+Query 78: [drug_for_symptom(metformin, Doc)]
+4 :: 3 - 00:00:00 (77 nps)                                                                          
+
+Query 79: [side_effect(D, D1), possible_drug_need(patient_mia, D), potential_side_effect(patient_alice, D1), treats(D, diabetes), side_effect_from_possible_drug(patient_iris, D1)]
+Query failed!!!                                                                                     
+4130 :: 0 - 00:00:01 (3489 nps)
+
+Query 80: [should_consult(SE, Drug)]
+9 :: 8 - 00:00:00 (686 nps)                                                                         
+
+Query 81: [possible_affected_organ(Drug, Spec)]
+7 :: 6 - 00:00:00 (65 nps)                                                                          
+
+Query 82: [should_consult(S, P)]
+9 :: 8 - 00:00:00 (164 nps)                                                                         
+
+Query 83: [drug_for_symptom(D, muscle_weakness), drug_for_symptom(D, fatigue), possible_drug_need(D1, D), possible_drug_need(D1, ibuprofen)]
+Query failed!!!                                                                                     
+48643 :: 0 - 00:00:03 (15069 nps)
+
+Query 84: [at_risk_specialist(D, psychiatry), preventive_care_needed(D, hypertension), exhibits(D, insomnia)]
+16 :: 10 - 00:00:00 (457 nps)                                                                       
+
+Query 85: [needs_specialist(patient_iris, D), requires_specialist(influenza, D), needs_specialist(D1, D), possible_drug_need(D1, lisinopril)]
+Query failed!!!                                                                                     
+2720 :: 0 - 00:00:00 (9560 nps)
+
+Query 86: [should_consult(D, D2), possible_affected_organ(D, D1), affects(migraine, D1), can_treat(D2, Doc), prescribed(Doc, aspirin)]
+Query failed!!!                                                                                     
+164330 :: 0 - 00:00:13 (12304 nps)
+
+Query 87: [possible_drug_need(D1, D), possible_drug_need(patient_alice, D), possible_affected_organ(D1, liver), at_risk_doctor(D1, dr_chen)]
+Query failed!!!                                                                                     
+111859 :: 0 - 00:00:12 (8938 nps)
+
+Query 88: [may_experience_side_effect(patient_jack, D1)]
+5 :: 3 - 00:00:00 (263 nps)                                                                         
+
+Query 89: [relevant_doctor(Drug, D)]
+4 :: 3 - 00:00:00 (153 nps)                                                                         
+
+Query 90: [should_consult(D2, dr_brown)]
+Query failed!!!                                                                                     
+14 :: 0 - 00:00:00 (222 nps)
+
+Query 91: [side_effect_from_possible_drug(Organ, RF)]
+9 :: 8 - 00:00:00 (35 nps)                                                                          
+
+Query 92: [risk_organ(patient_carol, D), symptom_organ(D1, D), has_symptom(diabetes, D1)]
+547 :: 9 - 00:00:00 (1630 nps)                                                                      
+
+Query 93: [drug_for_symptom(D, D1), drug(D), symptom(D1)]
+6 :: 5 - 00:00:00 (63 nps)                                                                          
+
+Query 94: [has_risk_factor(D, sedentary_lifestyle), exhibits(D, joint_pain)]
+4 :: 2 - 00:00:00 (551 nps)                                                                         
+
+Query 95: [side_effect_from_possible_drug(D, D1), exhibits(D, D2), side_effect_from_possible_drug(patient_dave, D1), drug_for_symptom(amlodipine, D2), symptom_organ(D2, heart)]
+Query failed!!!                                                                                     
+209698 :: 0 - 00:00:14 (14279 nps)
+
+Query 96: [complication_doctor(patient_kate, Spec)]
+35 :: 7 - 00:00:00 (374 nps)                                                                        
+
+Query 97: [at_risk_specialist(patient_grace, SE)]
+6 :: 5 - 00:00:00 (80 nps)                                                                          
+
+Query 98: [needs_specialist(Doc, D1)]
+Query failed!!!                                                                                     
+390 :: 0 - 00:00:00 (994 nps)
+
+Query 99: [complication_drug(D2, lisinopril)]
+27 :: 5 - 00:00:00 (423 nps)                                                                        
+
+Query 100: [drug_for_symptom(Doc, fatigue)]
+6 :: 3 - 00:00:00 (162 nps)                                                                         
+
+ming: 9562.45 nodes/query
+24 queries failed
+Time to run all queries: 87.176163184
+(cse327python311) jupyter-arj227@magic01:~/cse327-p4/austin/healthcare$ 
