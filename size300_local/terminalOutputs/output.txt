@@ -1,0 +1,58 @@
+$ py ../kbencoder.py --generate_kb --num_rules 300 --new_vocab --save_vocab
+C:\Users\austi\Lehigh University Dropbox\Austin James\CSE_327\P4\cse327-p4\kbparser.py:44: SyntaxWarning: invalid escape sequence '\)'
+  body_expr = re.split("(?<=\)),", rule_list[1])
+C:\Users\austi\Lehigh University Dropbox\Austin James\CSE_327\P4\cse327-p4\kbparser.py:54: SyntaxWarning: invalid escape sequence '\)'
+  query_atoms = re.split("(?<=\)),", query_expr)
+Classes: 10000000.0
+Max arity: 3
+KB generated (300)
+ 
+$ py ../kbencoder.py -g
+Generating facts list...
+Forward chaining depth: 1
+New facts: 179
+Forward chaining depth: 2
+New facts: 66
+Forward chaining depth: 3
+New facts: 56
+Forward chaining depth: 4
+New facts: 26
+Forward chaining depth: 5
+New facts: 9
+Forward chaining depth: 6
+Facts list generated
+336 total facts. Max depth = 5
+Number of queries: 200
+100 training queries generated
+100 testing queries generated
+ 
+$ py ../kbencoder.py --train_unification_model
+Using cuda device
+Uni model embed size: 50
+ [████████████████████] 3500/3500 Anchors generated
+ [████████████████████] 70000/70000 Triplets generated
+ [████████████████████] 70000/70000 Triplet encodings
+Early stopping triggered
+[Epoch 143/500, Training Loss: 0.1532, Validation Loss: 0.4307]
+Saved model.
+Saved plot.
+unification model generated
+ 
+$ py ../kbencoder.py -p
+Before removing duplicates: 3507783 examples
+After removing duplicates: 33636 examples
+Replicating pos examples 6 times
+pos len=29874, neg len=29874
+ 
+$ py ../nnreasoner.py
+Saved training loss figure.
+ 
+$ py ../evaluate.py -s
+std: 360002.5 nodes/query
+36 queries failed
+Time to run all queries: 2996.125
+ 
+$ py ../evaluate.py -u
+ming: 107963.8 nodes/query
+7 queries failed
+Time to run all queries: 6969.34375
