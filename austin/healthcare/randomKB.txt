@@ -1,0 +1,150 @@
+has_risk_factor(endocrinology, diabetes_history).
+affected_organ(patient_alice, abdominal_pain).
+possible_drug_need(patient_kate, headache).
+requires_specialist(migraine, dr_patel).
+complication_drug(blurred_vision, cough).
+exhibits(abdominal_pain, brain).
+risk_increases(shortness_of_breath, abdominal_pain).
+relevant_doctor(anxiety, dr_taylor).
+chronic_organ_concern(sweating, alzheimers).
+needs_monitoring(heart).
+potential_side_effect(patient_henry, cardiology).
+diagnosed_with(patient_olivia, patient_mia).
+may_have_disease(hypertension_history, infectious_disease).
+complication_organ(sedentary_lifestyle, fever).
+relevant_doctor(pancreas, infectious_disease).
+organ(patient_dave).
+at_risk_doctor(confusion, metformin).
+requires_specialist(arthritis, sweating).
+disease(patient_bob).
+possible_complication(diabetes_history, amoxicillin).
+secondary_organ_risk(excessive_thirst, heart_disease).
+needs_drug(pulmonology, cough).
+affects(memory_loss, shortness_of_breath).
+at_risk_for(dr_anderson, dr_chen).
+may_have_disease(abdominal_pain, amoxicillin).
+should_see_specialist(alzheimers, headache).
+high_risk_patient(anemia).
+needs_specialist(blurred_vision, liver).
+complication_organ(frequent_urination, covid19).
+complication_doctor(abdominal_pain, prednisone).
+may_experience_side_effect(patient_dave, cardiology).
+complication_specialist(abdominal_pain, albuterol).
+should_see_specialist(patient_bob, patient_mia).
+complication_specialist(excessive_thirst, anxiety).
+chronic_patient(psychiatry).
+risk_increases(confusion, anxiety).
+possible_affected_organ(patient_jack, bones).
+at_risk_doctor(migraine, albuterol).
+may_experience_side_effect(abdominal_pain, anemia).
+has_specialty(thyroid, back_pain).
+should_see_specialist(dr_taylor, aspirin).
+infectious(loss_of_appetite).
+relevant_doctor(albuterol, abdominal_pain).
+complication_specialist(fever, muscle_weakness).
+chronic_organ_concern(arthritis, alcohol_abuse).
+chronic(sedentary_lifestyle).
+possible_affected_organ(chest_pain, dr_garcia).
+affects(warfarin, swollen_joints).
+serious_health_concern(fluticasone).
+complication_drug(aging, abdominal_pain).
+can_treat(fever, endocrinology).
+doctor(blurred_vision).
+specialty(albuterol).
+preventive_care_needed(stroke, dr_taylor).
+complication_specialist(stress, heart).
+at_risk_specialist(headache, patient_jack).
+secondary_organ_risk(back_pain, muscle_weakness).
+exhibits(patient_kate, patient_jack).
+complication_drug_side_effect(dr_patel, patient_dave).
+possible_drug_need(albuterol, abdominal_pain).
+possible_drug_need(lungs, albuterol).
+has_symptom(covid19, patient_olivia).
+symptom_organ(dr_chen, bones).
+exhibits(amoxicillin, aging).
+preventive_care_needed(fatigue, obesity).
+doctor(shortness_of_breath).
+can_treat(endocrinology, neurology).
+may_experience_side_effect(patient_bob, asthma).
+drug(patient_eve).
+chronic(patient_jack).
+prescribed(shortness_of_breath, dr_smith).
+may_experience_side_effect(lisinopril, depression).
+complication_specialist(diabetes, abdominal_pain).
+chronic_organ_concern(diabetes, memory_loss).
+risk_increases(heart_disease, copd).
+chronic_patient(amoxicillin).
+at_risk_doctor(pancreas, levothyroxine).
+can_treat(joint_pain, anxiety).
+needs_specialist(amoxicillin, abdominal_pain).
+relevant_doctor(heart, patient_jack).
+risk_increases(asthma, kidneys).
+affected_organ(patient_mia, prednisone).
+possible_complication(amoxicillin, patient_noah).
+risk_organ(fluticasone, alzheimers).
+complication_drug(chest_pain, joint_pain).
+may_have_disease(patient_iris, influenza).
+risk_increases(endocrinology, hypertension).
+complication_drug(aging, dr_brown).
+diagnosed_with(dr_smith, aging).
+should_consult(stomach, pale_skin).
+chronic(abdominal_pain).
+serious_health_concern(back_pain).
+exhibits(abdominal_pain, cardiology).
+needs_drug(dr_smith, abdominal_pain).
+high_risk_patient(smoking).
+drug_for_symptom(chest_pain, joint_pain).
+chronic_patient(dr_smith).
+risk_increases(abdominal_pain, chest_pain).
+has_symptom(diabetes_history, alcohol_abuse).
+side_effect_from_possible_drug(kidneys, albuterol).
+needs_drug(arthritis, frequent_urination).
+infectious(pneumonia).
+preventive_care_needed(family_history, swollen_joints).
+may_experience_side_effect(neurology, abdominal_pain).
+has_risk_factor(hypertension_history, rheumatology).
+diagnosed_with(nephrology, patient_olivia).
+complication_drug(aging, smoking).
+symptom_organ(alcohol_abuse, gastroenterology).
+needs_specialist(hypothyroidism, gastroenterology).
+possible_drug_need(asthma, dr_brown).
+complication_specialist(insomnia, endocrinology).
+requires_specialist(amlodipine, diabetes_history).
+disease(anemia).
+symptom(alcohol_abuse).
+treats(amoxicillin, patient_frank).
+complication_organ(arthritis, diabetes_history).
+complication_risk(bones, prednisone).
+symptom_organ(stroke, abdominal_pain).
+possible_affected_organ(albuterol, liver_disease).
+at_risk_specialist(fatigue, joint_pain).
+possible_affected_organ(headache, blurred_vision).
+organ(amoxicillin).
+infectious_patient(warfarin).
+urgent_care(abdominal_pain).
+disease(alzheimers).
+possible_affected_organ(patient_kate, osteoporosis).
+drug(amlodipine).
+risk_factor(neurology).
+possible_drug_need(diabetes_history, amoxicillin).
+possible_affected_organ(ibuprofen, abdominal_pain).
+needs_specialist(abdominal_pain, hypertension_history).
+preventive_care_needed(hypertension, dr_martinez).
+infectious_patient(bones).
+preventive_care_needed(infectious_disease, amoxicillin).
+causes(blurred_vision, asthma).
+preventive_care_needed(liver_disease, abdominal_pain).
+disease(abdominal_pain).
+affects(dr_garcia, amlodipine).
+needs_drug(Doc, S) :- can_treat(Doc, S).
+diagnosed_with(D, D) :- may_have_disease(D, Organ).
+possible_drug_need(Spec, Spec) :- treats(Spec, P).
+complication_doctor(dr_anderson, Organ) :- needs_monitoring(Organ).
+patient(Organ) :- organ(Organ), has_risk_factor(Organ, fever), possible_drug_need(Organ, Organ).
+complication_doctor(D1, D1) :- organ(D1), urgent_care(D1), may_have_disease(D1, D1), treats(D1, Spec).
+urgent_care(Doc) :- organ(Doc), risk_factor(SE), possible_affected_organ(SE, Doc).
+complication_drug(patient_grace, abdominal_pain) :- high_risk_patient(SE), risk_organ(SE, excessive_thirst).
+chronic_patient(D2) :- secondary_organ_risk(D, D2), may_experience_side_effect(D, D), specialty(D2).
+chronic(RF) :- has_symptom(D, RF), affected_organ(RF, RF).
+complication_drug(dr_jones, SE) :- has_risk_factor(D, D), side_effect_from_possible_drug(D, SE).
+complication_drug(Drug, S) :- infectious_patient(Drug), should_consult(Drug, Drug), at_risk_for(Drug, brain), needs_drug(Drug, S).

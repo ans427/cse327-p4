@@ -1,0 +1,432 @@
+cse327python311) jupyter-arj227@magic01:~/cse327-p4/austin/random_kb$ CUDA_VISIBLE_DEVICES=2 python ../../nnreasoner.py --embed_type unification --save_model uni_mr_model_modarch.pt && CUDA_VISIBLE_DEVICES=2 python ../../evaluate.py -u --scoring_model_path uni_mr_model_modarch.pt
+States from vocab: vocab
+Num predicates: 10
+Max arity: 4
+Num constants: 100
+Num variables: 10
+
+Training unification
+Embed size: 50
+Reading examples from mr_train_examples.csv
+Parsing examples...
+Generating embeddings...
+Embedding input size: 450
+ [███████████████] 20189/20189 Prepping examples                                                    
+Loaded data...
+Using cuda device
+/opt/tljh/user/envs/cse327python311/lib/python3.11/site-packages/torch/nn/modules/lazy.py:180: UserWarning: Lazy modules are a new feature under heavy development so changes to the API or functionality can happen at any moment.
+  warnings.warn('Lazy modules are a new feature under heavy development '
+0       0.26535 (-)
+50      0.08905 (-0.0023)
+100     0.07031 (-0.0012)
+150     0.06495 (-0.0009)
+200     0.06038 (-0.0007)
+250     0.05989 (-0.0005)
+300     0.05270 (-0.0005)
+350     0.05183 (-0.0004)
+400     0.05167 (-0.0003)
+450     0.04800 (-0.0003)
+500     0.04790 (-0.0003)
+550     0.04240 (-0.0003)
+600     0.04133 (-0.0002)
+650     0.03715 (-0.0002)
+700     0.04081 (-0.0002)
+750     0.03649 (-0.0002)
+800     0.03551 (-0.0002)
+850     0.04054 (-0.0001)
+900     0.04303 (-0.0001)
+949     0.03580 (-0.0001)
+Saved training loss figure.
+using cuda device
+UNITY: ming
+        Embedding Model: rKB_model.pth
+        Scoring Model: uni_mr_model_modarch.pt
+
+        Control: mingoal
+        Rule Eval: Max Rule
+Learned Embedding: Network using cuda
+/opt/tljh/user/envs/cse327python311/lib/python3.11/site-packages/torch/nn/modules/lazy.py:180: UserWarning: Lazy modules are a new feature under heavy development so changes to the API or functionality can happen at any moment.
+  warnings.warn('Lazy modules are a new feature under heavy development '
+Query 1: [p5(X7, X7)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (6 nps)
+
+Query 2: [p8(X0), p3(X0, X0), p1(X0, X0)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:40 (5793 nps)
+
+Query 3: [p0(X2, a37)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:03:27 (4819 nps)
+
+Query 4: [p5(X0, X1), p3(X1, X0), p0(a51, X1), p9(a74, a5, X0, a72)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:03:35 (4640 nps)
+
+Query 5: [p1(X9, X9)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:35 (6553 nps)
+
+Query 6: [p3(X8, a13)]
+Query failed!!!                                                                                     
+1 :: 0 - 00:00:00 (6149 nps)
+
+Query 7: [p5(X2, X2)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (407 nps)
+
+Query 8: [p1(X1, X0), p4(a23, a56, X0, a0), p2(a63, X1)]
+Query failed!!!                                                                                     
+210619 :: 0 - 00:00:41 (5112 nps)
+
+Query 9: [p3(X4, a0)]
+2 :: 1 - 00:00:00 (651 nps)                                                                         
+
+Query 10: [p0(a42, X0), p0(a5, X0), p0(a51, X0), p0(X1, X0), p5(X1, a53)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:03:26 (4848 nps)
+
+Query 11: [p5(X0, X0)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (294 nps)
+
+Query 12: [p4(a54, X9, a40, a0)]
+Query failed!!!                                                                                     
+1 :: 0 - 00:00:00 (4955 nps)
+
+Query 13: [p3(X9, a11)]
+Query failed!!!                                                                                     
+1 :: 0 - 00:00:00 (6325 nps)
+
+Query 14: [p1(X4, X4)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:35 (6600 nps)
+
+Query 15: [p3(X0, X0), p8(X0), p9(a17, a49, a61, X0)]
+Query failed!!!                                                                                     
+781768 :: 0 - 00:02:22 (5487 nps)
+
+Query 16: [p8(X3)]
+2 :: 1 - 00:00:00 (96 nps)                                                                          
+
+Query 17: [p1(X6, X6)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:37 (6266 nps)
+
+Query 18: [p1(X9, X9)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:35 (6510 nps)
+
+Query 19: [p3(X3, X8)]
+2 :: 1 - 00:00:00 (111 nps)                                                                         
+
+Query 20: [p3(X8, X8)]
+2 :: 1 - 00:00:00 (397 nps)                                                                         
+
+Query 21: [p1(X2, X2)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:35 (6602 nps)
+
+Query 22: [p0(a83, X0), p1(X0, a62)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:02:51 (5832 nps)
+
+Query 23: [p3(X2, X2)]
+2 :: 1 - 00:00:00 (433 nps)                                                                         
+
+Query 24: [p0(a68, X0), p5(X0, a15)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:03:13 (5179 nps)
+
+Query 25: [p3(X5, X5)]
+2 :: 1 - 00:00:00 (373 nps)                                                                         
+
+Query 26: [p1(X1, X1)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:36 (6377 nps)
+
+Query 27: [p5(X0, a52), p7(a79, a2, a95, X0)]
+Query failed!!!                                                                                     
+2 :: 0 - 00:00:00 (582 nps)
+
+Query 28: [p5(X3, X3)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (501 nps)
+
+Query 29: [p9(X2, X0, a13, X1), p6(X0), p1(X1, X1), p1(X2, X2)]
+Query failed!!!                                                                                     
+424607 :: 0 - 00:01:06 (6414 nps)
+
+Query 30: [p5(X4, X4)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (248 nps)
+
+Query 31: [p1(X0, X0), p5(X1, X0), p1(X0, X0), p1(X1, X1)]
+Query failed!!!                                                                                     
+6302 :: 0 - 00:00:01 (5664 nps)
+
+Query 32: [p1(X8, X8)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:35 (6471 nps)
+
+Query 33: [p7(X1, a13, X0, X2), p6(X0), p0(a52, X1), p9(a33, a99, a40, X2)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:04:14 (3932 nps)
+
+Query 34: [p1(X0, a14), p1(X0, X1), p1(X1, X1)]
+Query failed!!!                                                                                     
+14459 :: 0 - 00:00:02 (5299 nps)
+
+Query 35: [p1(X1, X0), p1(X1, X1)]
+Query failed!!!                                                                                     
+30406 :: 0 - 00:00:04 (7425 nps)
+
+Query 36: [p2(X0, a34), p1(X0, X0), p7(a79, X0, X1, X2), p7(a13, X0, a0, X2)]
+Query failed!!!                                                                                     
+235206 :: 0 - 00:00:41 (5733 nps)
+
+Query 37: [p0(X5, a37)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:03:16 (5101 nps)
+
+Query 38: [p3(X1, X1)]
+2 :: 1 - 00:00:00 (713 nps)                                                                         
+
+Query 39: [p3(a38, a38)]
+Query failed!!!                                                                                     
+1 :: 0 - 00:00:00 (5872 nps)
+
+Query 40: [p0(X5, a37)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:03:15 (5110 nps)
+
+Query 41: [p3(X1, X1)]
+2 :: 1 - 00:00:00 (751 nps)                                                                         
+
+Query 42: [p5(X8, X8)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (886 nps)
+
+Query 43: [p3(a27, X0), p9(X1, a49, a61, X0), p7(a3, a16, a82, X1)]
+Query failed!!!                                                                                     
+1 :: 0 - 00:00:00 (1098 nps)
+
+Query 44: [p8(X0), p3(X0, X0)]
+5 :: 4 - 00:00:00 (244 nps)                                                                         
+
+Query 45: [p3(X0, X0), p5(X0, X0)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (547 nps)
+
+Query 46: [p7(X0, a42, a0, a0), p4(X0, a77, X1, a13), p7(a53, a88, X0, a1), p1(a28, X1)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:02:53 (5753 nps)
+
+Query 47: [p5(X5, X5)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (777 nps)
+
+Query 48: [p0(X5, a37)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:03:14 (5141 nps)
+
+Query 49: [p5(X0, X0), p0(X0, a37)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:03:10 (5253 nps)
+
+Query 50: [p3(X9, X9)]
+2 :: 1 - 00:00:00 (715 nps)                                                                         
+
+Query 51: [p3(X0, a21), p5(a21, X0)]
+Query failed!!!                                                                                     
+2 :: 0 - 00:00:00 (784 nps)
+
+Query 52: [p0(X7, X5)]
+2 :: 1 - 00:00:00 (195 nps)                                                                         
+
+Query 53: [p3(X8, X8)]
+2 :: 1 - 00:00:00 (804 nps)                                                                         
+
+Query 54: [p9(a32, X0, a50, a75), p2(a19, X0)]
+Query failed!!!                                                                                     
+1 :: 0 - 00:00:00 (2049 nps)
+
+Query 55: [p3(X0, X0)]
+2 :: 1 - 00:00:00 (820 nps)                                                                         
+
+Query 56: [p3(a80, X0), p8(X0)]
+Query failed!!!                                                                                     
+948665 :: 0 - 00:02:44 (5773 nps)
+
+Query 57: [p0(X0, X2), p3(X1, X0), p0(a6, X1), p4(X2, a17, X3, a0), p5(a14, X3)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:03:39 (4565 nps)
+
+Query 58: [p1(X3, X3)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:35 (6478 nps)
+
+Query 59: [p5(X5, X5)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (565 nps)
+
+Query 60: [p3(X3, X3)]
+2 :: 1 - 00:00:00 (487 nps)                                                                         
+
+Query 61: [p3(X9, X0)]
+2 :: 1 - 00:00:00 (134 nps)                                                                         
+
+Query 62: [p5(X8, X8)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (708 nps)
+
+Query 63: [p5(X1, X1)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (959 nps)
+
+Query 64: [p5(X4, X4)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (975 nps)
+
+Query 65: [p0(X0, X1), p7(X0, a2, a95, a63), p1(X0, X0), p3(a42, X1), p7(a0, a33, X0, a18)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:03:08 (5311 nps)
+
+Query 66: [p5(X4, X4)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (898 nps)
+
+Query 67: [p5(X7, X7)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (1011 nps)
+
+Query 68: [p0(a70, X4)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:02:59 (5578 nps)
+
+Query 69: [p5(X5, X5)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (818 nps)
+
+Query 70: [p1(X6, X6)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:33 (6862 nps)
+
+Query 71: [p9(X0, X1, a0, a0), p1(X0, X0), p7(X1, a29, a2, a14), p5(X0, X0)]
+Query failed!!!                                                                                     
+34253 :: 0 - 00:00:05 (5852 nps)
+
+Query 72: [p1(X1, X1)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:32 (7078 nps)
+
+Query 73: [p5(X0, X0), p3(X0, X0), p2(X0, a0)]
+Query failed!!!                                                                                     
+4 :: 0 - 00:00:00 (275 nps)
+
+Query 74: [p0(a89, X6)]
+2 :: 1 - 00:00:00 (415 nps)                                                                         
+
+Query 75: [p9(a70, a41, a29, X0), p3(X0, X1), p1(X1, a34)]
+Query failed!!!                                                                                     
+634460 :: 0 - 00:01:37 (6521 nps)
+
+Query 76: [p5(X5, X5)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (794 nps)
+
+Query 77: [p0(a46, X4)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:02:58 (5610 nps)
+
+Query 78: [p8(X2)]
+2 :: 1 - 00:00:00 (172 nps)                                                                         
+
+Query 79: [p1(X0, a51), p1(X0, X1), p3(a40, X1)]
+Query failed!!!                                                                                     
+40441 :: 0 - 00:00:06 (6276 nps)
+
+Query 80: [p1(X5, X5)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:34 (6712 nps)
+
+Query 81: [p5(X8, X8)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (918 nps)
+
+Query 82: [p1(X7, X7)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:34 (6668 nps)
+
+Query 83: [p1(X4, X4)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:34 (6721 nps)
+
+Query 84: [p4(a23, a56, a62, X0), p7(a71, X1, X0, X0), p3(X1, X1)]
+Query failed!!!                                                                                     
+4 :: 0 - 00:00:00 (939 nps)
+
+Query 85: [p1(X0, X1), p0(X0, a37), p9(a17, X1, X2, a70), p2(X0, X1), p3(a60, X2)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:03:14 (5130 nps)
+
+Query 86: [p4(a54, X1, X8, X3)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:02:20 (7139 nps)
+
+Query 87: [p1(X0, X0), p0(X0, a17)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:02:44 (6080 nps)
+
+Query 88: [p3(X3, X3)]
+2 :: 1 - 00:00:00 (698 nps)                                                                         
+
+Query 89: [p3(X7, X7)]
+2 :: 1 - 00:00:00 (772 nps)                                                                         
+
+Query 90: [p1(X9, X9)]
+Query failed!!!                                                                                     
+232635 :: 0 - 00:00:34 (6806 nps)
+
+Query 91: [p2(a19, X0), p9(a32, X0, X1, a75), p1(a0, X1)]
+Query failed!!!                                                                                     
+165167 :: 0 - 00:00:27 (6045 nps)
+
+Query 92: [p9(a28, X0, X1, X2), p5(X0, a23), p6(X1), p0(a13, X2)]
+Query failed!!!                                                                                     
+1000000 :: 0 - 00:03:11 (5224 nps)
+
+Query 93: [p9(X0, a65, a50, a75), p7(X1, a20, a13, X0), p9(X1, a31, a69, a37)]
+Query failed!!!                                                                                     
+1 :: 0 - 00:00:00 (963 nps)
+
+Query 94: [p8(a5)]
+Query failed!!!                                                                                     
+654420 :: 0 - 00:01:55 (5662 nps)
+
+Query 95: [p3(a15, X3)]
+2 :: 1 - 00:00:00 (1563 nps)                                                                        
+
+Query 96: [p8(X0), p5(X0, X0), p5(X0, X0), p1(X0, X0), p0(X0, a37)]
+Query failed!!!                                                                                     
+398394 :: 0 - 00:01:08 (5843 nps)
+
+Query 97: [p8(X0), p3(X1, X0), p3(X1, X1)]
+6 :: 5 - 00:00:00 (142 nps)                                                                         
+
+Query 98: [p5(X0, X0)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (880 nps)
+
+Query 99: [p5(X0, X0), p3(a19, X0)]
+Query failed!!!                                                                                     
+3 :: 0 - 00:00:00 (6701 nps)
+
+Query 100: [p5(a72, a72)]
+Query failed!!!                                                                                     
+2 :: 0 - 00:00:00 (952 nps)
+
+ming: 270688.19 nodes/query
+79 queries failed
+Time to run all queries: 4970.975576472002
+(cse327python311) jupyter-arj227@magic01:~/cse327-p4/austin/random_kb$ 
