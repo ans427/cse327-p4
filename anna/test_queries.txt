@@ -1,0 +1,100 @@
+drug_for_symptom(P, headache).
+complication_drug(Organ, P).
+at_risk_specialist(Organ, Drug).
+at_risk_for(SE, cancer).
+at_risk_for(Doc, osteoporosis).
+drug_for_symptom(D, shortness_of_breath), possible_drug_need(patient_frank, D).
+risk_organ(D1, D), possible_affected_organ(patient_kate, D), at_risk_specialist(D1, cardiology), symptom_organ(frequent_urination, D).
+should_consult(Drug, dr_garcia).
+has_risk_factor(D1, D), risk_increases(D, D2), complication_drug(D1, amlodipine), affects(D2, lungs).
+possible_drug_need(patient_frank, Doc).
+should_consult(Spec, S).
+at_risk_specialist(D, oncology), can_treat(dr_martinez, D), possible_drug_need(D, albuterol), at_risk_doctor(D, dr_martinez).
+possible_drug_need(D1, RF).
+possible_affected_organ(SE, thyroid).
+chronic_organ_concern(SE, D1).
+drug_for_symptom(SE, Organ).
+should_consult(patient_liam, S).
+possible_drug_need(P, amlodipine).
+drug_for_symptom(D1, Drug).
+side_effect_from_possible_drug(SE, RF).
+risk_factor(D), risk_increases(D, D1), possible_complication(patient_liam, D1).
+should_consult(D2, P).
+symptom_organ(excessive_thirst, D), secondary_organ_risk(patient_carol, D), affects(D1, D), diagnosed_with(patient_kate, D1).
+symptom_organ(D2, D), symptom_organ(headache, D), symptom_organ(D1, D), symptom(D1), symptom_organ(D2, pancreas).
+should_consult(P, Drug).
+exhibits(D2, D), symptom_organ(D, D1), complication_organ(D2, D1), secondary_organ_risk(D2, brain).
+at_risk_specialist(Spec, cardiology).
+drug_for_symptom(D, Doc).
+may_experience_side_effect(Organ, Drug).
+symptom_organ(loss_of_appetite, D), symptom_organ(dizziness, D).
+possible_drug_need(D1, D), possible_drug_need(D2, D), needs_drug(D1, aspirin), at_risk_specialist(D2, psychiatry), side_effect(D, nausea).
+may_have_disease(D1, SE).
+exhibits(D1, D), has_symptom(pneumonia, D), possible_affected_organ(D1, pancreas).
+at_risk_doctor(SE, Spec).
+possible_drug_need(P, amlodipine).
+at_risk_for(patient_olivia, Doc).
+should_consult(P, Organ).
+drug_for_symptom(Spec, swollen_joints).
+needs_specialist(SE, P).
+possible_affected_organ(patient_liam, S).
+organ(D).
+should_consult(D1, D), should_consult(D2, D), chronic_patient(D1), side_effect_from_possible_drug(D2, Doc), side_effect_from_possible_drug(patient_henry, Doc).
+should_consult(D, D1), possible_affected_organ(D, brain), can_treat(D1, D2), at_risk_specialist(D2, cardiology).
+has_risk_factor(patient_frank, D), has_risk_factor(patient_alice, D).
+drug_for_symptom(D, swollen_joints), drug_for_symptom(D, D1), has_symptom(kidney_disease, D1), possible_drug_need(patient_mia, D).
+should_consult(D, dr_anderson), side_effect_from_possible_drug(D, dizziness).
+possible_drug_need(RF, D2).
+possible_affected_organ(patient_alice, Organ).
+secondary_organ_risk(D, SE).
+possible_complication(D2, Spec).
+side_effect_from_possible_drug(patient_kate, SE).
+relevant_doctor(D, D1), should_consult(patient_eve, D), should_consult(patient_mia, D), may_have_disease(patient_mia, D1).
+side_effect_from_possible_drug(patient_eve, S).
+possible_affected_organ(P, lungs).
+possible_drug_need(D, amoxicillin), side_effect_from_possible_drug(D, D1), symptom(D1), needs_specialist(D, infectious_disease).
+risk_increases(poor_diet, D), risk_increases(D1, D), risk_factor(D1), has_risk_factor(patient_liam, D1).
+potential_side_effect(D2, sweating).
+has_symptom(osteoporosis, D), has_symptom(D1, D), treats(D2, D1), drug_for_symptom(D2, D).
+may_have_disease(D, D1), side_effect_from_possible_drug(D, muscle_weakness), may_have_disease(patient_bob, D1), exhibits(D, fever), possible_complication(D, heart_disease).
+prescribed(D, metformin), can_treat(dr_patel, D).
+risk_increases(D, D1), risk_factor(D), preventive_care_needed(patient_alice, D1).
+may_have_disease(Spec, S).
+risk_factor(D), risk_increases(D, D1), risk_increases(smoking, D1).
+may_have_disease(Organ, SE).
+may_have_disease(Drug, D2).
+risk_organ(D2, D1).
+needs_specialist(S, D2).
+secondary_organ_risk(Doc, kidneys).
+chronic(D), preventive_care_needed(patient_eve, D), requires_specialist(D, neurology).
+side_effect_from_possible_drug(D1, D2).
+has_specialty(D1, D), needs_specialist(patient_alice, D), should_consult(patient_alice, D1).
+possible_drug_need(patient_frank, D), side_effect(D, nausea).
+complication_drug(patient_dave, D), drug_for_symptom(D, insomnia).
+has_symptom(D, cough), may_have_disease(patient_mia, D).
+treats(D, copd), drug_for_symptom(D, D1), has_symptom(heart_disease, D1), drug_for_symptom(D, cough).
+may_have_disease(Spec, D).
+should_consult(patient_alice, Doc).
+symptom_organ(Doc, heart).
+may_have_disease(D, covid19), needs_specialist(D, D1), needs_specialist(patient_alice, D1), side_effect_from_possible_drug(D, muscle_weakness).
+should_consult(D, dr_martinez).
+drug_for_symptom(amlodipine, D).
+drug_for_symptom(D, fever), drug_for_symptom(D, D1), side_effect_from_possible_drug(D2, D1), possible_drug_need(D2, amlodipine).
+possible_drug_need(RF, D2).
+needs_specialist(D2, D).
+possible_complication(D2, D).
+side_effect_from_possible_drug(Spec, D).
+may_have_disease(patient_alice, S).
+complication_risk(Drug, kidney_disease).
+at_risk_specialist(D, psychiatry), should_consult(D, dr_brown).
+may_have_disease(patient_carol, D1).
+drug_for_symptom(D, dizziness), drug_for_symptom(D, headache).
+secondary_organ_risk(patient_dave, D), possible_affected_organ(patient_eve, D), symptom_organ(dizziness, D).
+side_effect_from_possible_drug(patient_eve, D).
+should_consult(patient_mia, SE).
+side_effect_from_possible_drug(Drug, RF).
+possible_affected_organ(patient_henry, D1).
+possible_drug_need(P, D).
+side_effect_from_possible_drug(P, Organ).
+relevant_doctor(D, D1).
+exhibits(D, headache), diagnosed_with(D, diabetes).

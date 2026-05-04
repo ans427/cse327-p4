@@ -1,0 +1,100 @@
+at_risk_doctor(RF, D).
+risk_increases(D1, D), may_have_disease(patient_kate, D), may_have_disease(patient_iris, D), has_risk_factor(patient_mia, D1), risk_increases(D1, cancer).
+complication_drug_side_effect(Organ, Doc).
+secondary_organ_risk(D1, Organ).
+secondary_organ_risk(D, kidneys), needs_specialist(D, D1), should_see_specialist(patient_iris, D1).
+at_risk_specialist(Spec, D2).
+should_see_specialist(D1, Doc).
+risk_organ(D2, lungs).
+drug_for_symptom(P, Organ).
+possible_drug_need(RF, aspirin).
+complication_drug(D, D1), possible_drug_need(D, ibuprofen), drug_for_symptom(D1, fatigue).
+drug_for_symptom(Spec, headache).
+possible_drug_need(D2, metformin).
+side_effect_from_possible_drug(D1, RF).
+preventive_care_needed(RF, Spec).
+disease(D), may_have_disease(patient_kate, D).
+possible_drug_need(SE, P).
+may_have_disease(patient_alice, D), may_have_disease(D1, D), possible_affected_organ(D1, thyroid).
+needs_specialist(Spec, pulmonology).
+may_have_disease(D1, D), chronic(D), diagnosed_with(D1, D), may_have_disease(D1, asthma), affected_organ(D1, kidneys).
+at_risk_doctor(RF, SE).
+should_consult(patient_kate, Drug).
+chronic_patient(Drug).
+complication_drug_side_effect(D2, P).
+has_risk_factor(D1, D), risk_increases(D, cancer), risk_organ(D1, lungs), risk_increases(D, liver_disease).
+symptom_organ(D, Drug).
+at_risk_specialist(S, endocrinology).
+possible_drug_need(D, D1), risk_organ(D, D2), possible_drug_need(patient_henry, D1), complication_organ(patient_alice, D2).
+side_effect_from_possible_drug(patient_jack, RF).
+possible_affected_organ(D2, D), symptom_organ(D1, D), drug_for_symptom(atorvastatin, D1), side_effect_from_possible_drug(D2, insomnia), drug_for_symptom(fluticasone, D1).
+possible_drug_need(Drug, Organ).
+possible_drug_need(SE, atorvastatin).
+may_have_disease(D1, D), has_symptom(D, pale_skin), possible_drug_need(D1, oseltamivir).
+possible_drug_need(Spec, Drug).
+should_see_specialist(Doc, D), needs_specialist(D1, D), diagnosed_with(D1, D2), may_have_disease(patient_liam, D2), should_consult(Doc, dr_patel).
+possible_drug_need(RF, D1).
+drug_for_symptom(Organ, D2).
+may_experience_side_effect(RF, SE).
+side_effect_from_possible_drug(patient_grace, D), side_effect_from_possible_drug(D1, D), should_consult(D1, dr_martinez), symptom_organ(D, D2), secondary_organ_risk(patient_jack, D2).
+may_have_disease(Organ, Spec).
+risk_increases(D, liver_disease), risk_increases(D, D1), affects(D1, D2), possible_affected_organ(patient_henry, D2).
+risk_organ(patient_grace, D), symptom_organ(sweating, D), risk_organ(D1, D), preventive_care_needed(D1, cancer).
+may_have_disease(patient_iris, D2).
+complication_drug(D1, D), complication_drug(patient_alice, D), possible_drug_need(patient_henry, D), has_risk_factor(D1, D2), risk_increases(D2, diabetes).
+at_risk_doctor(P, RF).
+side_effect_from_possible_drug(patient_kate, SE).
+drug_for_symptom(P, D2).
+needs_specialist(Organ, gastroenterology).
+needs_specialist(patient_kate, Spec).
+possible_affected_organ(Spec, Drug).
+at_risk_for(Doc, alzheimers).
+side_effect_from_possible_drug(D, Organ).
+has_symptom(stroke, D), symptom(D).
+possible_affected_organ(patient_eve, D), possible_affected_organ(D1, D), possible_affected_organ(patient_henry, D), secondary_organ_risk(D1, brain).
+may_have_disease(Drug, D).
+side_effect_from_possible_drug(S, SE).
+has_risk_factor(D, D1), chronic_patient(D), preventive_care_needed(D, osteoporosis), patient(D), risk_increases(D1, alzheimers).
+at_risk_doctor(patient_eve, Doc).
+chronic(D), may_have_disease(D1, D), at_risk_for(D1, cancer), secondary_organ_risk(D1, heart).
+complication_organ(patient_carol, S).
+possible_drug_need(D, Organ).
+side_effect_from_possible_drug(D, Doc).
+drug_for_symptom(D2, S).
+should_consult(patient_carol, D), can_treat(D, patient_bob).
+has_symptom(D, abdominal_pain), treats(D1, D), possible_drug_need(patient_grace, D1).
+needs_specialist(S, RF).
+risk_organ(patient_jack, D1).
+may_have_disease(Doc, D).
+symptom(D), exhibits(patient_dave, D), has_symptom(D1, D), at_risk_for(patient_dave, D1).
+may_have_disease(SE, S).
+risk_organ(D, Spec).
+possible_drug_need(P, SE).
+symptom(D), symptom_organ(D, brain), exhibits(patient_dave, D), drug_for_symptom(D1, D), complication_drug(patient_dave, D1).
+possible_drug_need(D2, Doc).
+may_have_disease(D, cancer), possible_drug_need(D, warfarin), affected_organ(D, lungs).
+potential_side_effect(D, sweating), possible_affected_organ(D, lungs), complication_drug(D, aspirin).
+possible_drug_need(P, Doc).
+drug_for_symptom(Drug, D2).
+drug_for_symptom(Drug, S).
+side_effect_from_possible_drug(D, insomnia), possible_affected_organ(D, heart), possible_drug_need(D, fluticasone).
+symptom_organ(Spec, brain).
+possible_drug_need(D1, Doc).
+possible_drug_need(S, SE).
+needs_drug(Drug, D2).
+preventive_care_needed(S, RF).
+complication_doctor(patient_alice, Doc).
+possible_drug_need(D2, SE).
+possible_complication(patient_liam, D), preventive_care_needed(patient_henry, D).
+may_have_disease(SE, Drug).
+complication_drug_side_effect(D, D1), side_effect_from_possible_drug(D, abdominal_pain), side_effect_from_possible_drug(patient_noah, D1).
+side_effect(oseltamivir, D), side_effect_from_possible_drug(patient_olivia, D).
+at_risk_specialist(Drug, endocrinology).
+side_effect_from_possible_drug(patient_eve, D), has_symptom(D1, D), preventive_care_needed(patient_henry, D1), complication_drug_side_effect(patient_carol, D), side_effect_from_possible_drug(patient_kate, D).
+relevant_doctor(D, covid19), relevant_doctor(D, copd).
+possible_affected_organ(D1, Drug).
+possible_affected_organ(D2, liver).
+may_have_disease(Drug, D).
+side_effect_from_possible_drug(patient_mia, Drug).
+possible_drug_need(RF, D1).
+risk_factor(D), risk_increases(D, D1), risk_increases(D, heart_disease), has_risk_factor(patient_carol, D), risk_increases(stress, D1).
